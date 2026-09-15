@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤨</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
+<img id="image">
+
+<script>
+  const images = Array.from(
+    { length: 29 },
+    (_, i) => `${i + 1}.jpg`
+  );
+
+  const randomImage =
+    images[Math.floor(Math.random() * images.length)];
+
+  document.getElementById("image").src = randomImage;
+</script>
+
+</body>
+</html>
